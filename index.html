@@ -58,7 +58,6 @@
         margin: auto;
       }
       .controls {
-        display: none;
         position: fixed;
         right: 5%;
         bottom: 5%;
@@ -101,12 +100,12 @@
 
       <div class="controls">
         <div class="control">
-          <i class="fas fa-arrow-up" onmousedown="moveForControls('top')"  onmouseup="clearMove('top')" ></i>
+          <i class="fas fa-arrow-up" ontouchstart="moveForControls('top')"   ontouchend="clearMove('top')" ></i>
         </div>
         <div class="control">
-          <i class="fas fa-arrow-left" onmousedown="moveForControls('left')" onmouseup="clearMove('left')"></i>
-          <i class="fas fa-arrow-down" onmousedown="moveForControls('down')"   onmouseup="clearMove('down')"></i>
-          <i class="fas fa-arrow-right" onmousedown="moveForControls('right')"   onmouseup="clearMove('right')"></i>
+          <i class="fas fa-arrow-left" ontouchstart="moveForControls('left')" ontouchend="clearMove('left')"></i>
+          <i class="fas fa-arrow-down" ontouchstart="moveForControls('down')"   ontouchend="clearMove('down')"></i>
+          <i class="fas fa-arrow-right" ontouchstart="moveForControls('right')"   ontouchend="clearMove('right')"></i>
         </div>
       </div>
     </div>
@@ -278,6 +277,7 @@
       console.log("leave,",place);
       switch (place) {
           case "top":keys.ArrowUp=false;
+          
             break;
           case "right":keys.ArrowRight=false;
             break;
